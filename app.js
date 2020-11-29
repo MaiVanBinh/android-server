@@ -7,7 +7,6 @@ const fs = require("fs");
 const app = express();
 const PORT = process.env.PORT || 5000;
 
-// const MONGODB_URI =  'mongodb+srv://shop:4W6RVfGLECaQkDjL@cluster0-5zjmf.mongodb.net/test?retryWrites=true&w=majority';
 app.use(
   express.urlencoded({
     extended: true,
