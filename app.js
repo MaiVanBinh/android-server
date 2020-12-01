@@ -29,19 +29,16 @@ app.use((req, res, next) => {
 const dir = __dirname;
 
 app.get("/data/:token", (req, res) => {
-  const token = req.params.token;
+  // const token = req.params.token;
   const data = JSON.parse(fs.readFileSync(dir + "/data.json", "utf-8"));
-  console.log(data.token);
-  if (token === data.token) {
-    res.status(200).json({
-      create: data,
-      params: token,
-    });
-  } else {
-    res.status(404).json({
-      message: data,
-    });
-  }
+  res.status(200).json(data);
+  // if (token === data.token) {
+    
+  // } else {
+  //   res.status(404).json({
+  //     message: 'lol',
+  //   });
+  // }
 });
 
 app.post("/data", (req, res, next) => {
